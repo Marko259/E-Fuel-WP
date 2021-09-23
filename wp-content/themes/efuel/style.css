@@ -1,6 +1,7 @@
 .announcement {
   text-align: center;
   background-color: #09cc98;
+  padding: 4px;
 }
 
 *, *:before, *:after {
@@ -11,7 +12,7 @@ div {
   display: block;
 }
 
-body[data-anim-load="true"].js-theme-loading .announcement__text {
+body[data-anim-load="true"].js-theme-loading .announcement_text {
   opacity: 0;
   visibility: hidden;
   -ms-transform: translateY(-20px);
@@ -19,8 +20,9 @@ body[data-anim-load="true"].js-theme-loading .announcement__text {
   transform: translateY(-20px);
 }
 
-.announcement__text, .announcement__text.rte a {
-  color: #fff
+.announcement_text, .announcement_text.rte a, a {
+  color: #fff;
+  text-decoration: none!important;
 }
 
 .announcement_link {
@@ -30,9 +32,8 @@ body[data-anim-load="true"].js-theme-loading .announcement__text {
   transition: all 0.3s ease-in-out;
 }
 
-.announcement_link:hover {
+.announcement_link a:hover, .announcement_text a:active {
   opacity: .9;
-  text-decoration: none;
 }
 
 .announcement_text {
@@ -49,6 +50,16 @@ body[data-anim-load="true"].js-theme-loading .announcement__text {
     padding: 6px 12px;
     font-size: 0.7rem;
   }
+}
+
+html, body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  background-color: #fff;
 }
 
 .banner-image {

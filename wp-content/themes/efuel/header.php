@@ -7,39 +7,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/99d3ff8338.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.shopifycdn.com">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
 
     <?php wp_head() ?>
     <!---Linking Pages End-->
 </head>
 
 <body>
-    <a class="announcement_link" href="#">
+    <a class="announcement_link fixed-static" href="#">
         <div class="announcement">
             <p class="announcement_text">📣📣 ❗️ VILDE TILBUD PÅ X-GAMER ❗️ 📣📣</p>
         </div>
     </a>
+    <header role="banner" id="top" class="header sticky-top">
+        <div class="page-header">
+            <h1 class="d-flex justify-content-center">
+                <a href="<?php bloginfo('url') ?>">
+                    <?php
+                    if (function_exists('the_custom_logo')) :
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
+                    ?>
+                        <img src="<?php echo $logo[0] ?>" alt="img" class="img-fluid">
+                    <?php else :
+                    ?>
+
+                    <?php echo get_bloginfo('name');
+
+                    endif ?>
+                </a>
+            </h1>
+        </div>
+    </header>
     <!--<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" id="primary-navbar">
         <div class="container">
-            <a class="navbar-brand" href="<?php /* bloginfo('url') */?>"> -->
+            <a class="navbar-brand" href="<?php /* bloginfo('url') */ ?>"> -->
 
-                <?php /*
+    <?php /*
                 if (function_exists('the_custom_logo')) :
                     $custom_logo_id = get_theme_mod('custom_logo');
                     $logo = wp_get_attachment_image_src($custom_logo_id); */
-                ?>
-                    <!--<img src="<?php /* echo $logo[0] */ ?>" class="img-fluid Logo" alt="logo">-->
-                <?php /* endif */
-                ?>
+    ?>
+    <!--<img src="<?php /* echo $logo[0] */ ?>" class="img-fluid Logo" alt="logo">-->
+    <?php /* endif */
+    ?>
 
-                <?php /* echo get_bloginfo('name'); */?></a>
-            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <?php /* echo get_bloginfo('name'); */ ?></a>
+    <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="mx-auto"></div>-->
-                <?php
-                /* wp_nav_menu(
+    <?php
+    /* wp_nav_menu(
                     array(
                         'menu' => 'primary',
                         'depth' => 2,
@@ -52,8 +74,8 @@
                         'walker' => new wp_bootstrap_navwalker()
                     )
                 ); */
-                ?>
-                <!--<ul class="navbar-nav">
+    ?>
+    <!--<ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Home</a>
                     </li>
@@ -70,6 +92,6 @@
                         <a class="nav-link text-white" href="#">Contact</a>
                     </li>
                 </ul> -->
-            <!--</div>
+    <!--</div>
         </div>
     </nav>-->
