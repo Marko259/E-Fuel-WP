@@ -21,23 +21,34 @@
         </div>
     </a>
     <header role="banner" id="top" class="header sticky-top">
-        <div class="page-header">
-            <h1 class="d-flex justify-content-center">
-                <a href="<?php bloginfo('url') ?>">
-                    <?php
-                    if (function_exists('the_custom_logo')) :
-                        $custom_logo_id = get_theme_mod('custom_logo');
-                        $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
-                    ?>
-                        <img src="<?php echo $logo[0] ?>" alt="img" class="img-fluid">
-                    <?php else :
-                    ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="SideNav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
+                    <span class="align-bottom" onclick="openNav()"><i class="fas fa-thin fa-bars fa-2x"></i></span>
+                </div>
+                <div class="col-md-4">
+                    <div class="page-header d-flex justify-content-center">
+                        <a href="<?php bloginfo('url') ?>">
+                            <?php
+                            if (function_exists('the_custom_logo')) :
+                                $custom_logo_id = get_theme_mod('custom_logo');
+                                $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
+                            ?>
+                                <img src="<?php echo $logo[0] ?>" alt="img" class="img-fluid">
+                            <?php else :
+                            ?>
 
-                    <?php echo get_bloginfo('name');
+                            <?php echo get_bloginfo('name');
 
-                    endif ?>
-                </a>
-            </h1>
+                            endif ?>
+                        </a>
+                        <a class="float-right text-dark" href="#"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <!--<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" id="primary-navbar">

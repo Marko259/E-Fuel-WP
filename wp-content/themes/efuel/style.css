@@ -22,7 +22,7 @@ body[data-anim-load="true"].js-theme-loading .announcement_text {
 
 .announcement_text, .announcement_text.rte a, a {
   color: #fff;
-  text-decoration: none!important;
+  text-decoration: none
 }
 
 .announcement_link {
@@ -58,8 +58,63 @@ html, body {
   font-style: normal;
 }
 
+/* * {
+  outline: 1px solid red;
+}*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
 .header {
   background-color: #fff;
+  padding: 6px;
+}
+
+.bars div {
+  width: 30px;
+  height: 2.5px;
+  background-color: black;
+  margin: 8px 0;
 }
 
 .banner-image {

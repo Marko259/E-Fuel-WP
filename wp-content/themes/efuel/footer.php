@@ -1,6 +1,6 @@
 <footer class="bg-light text-lg-start">
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container">
         <!--Grid row-->
         <div class="row navbar-expand-lg">
             <!--Grid column-->
