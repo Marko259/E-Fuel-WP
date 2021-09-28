@@ -38,7 +38,7 @@ add_action('wp_enqueue_scripts', 'register_scripts');
 function register_menus()
 {
     $locations = array(
-        'primary' => 'Main menu',
+        'primary' => 'Primary',
         'secondary' => 'Footer menu'
     );
 

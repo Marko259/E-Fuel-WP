@@ -15,21 +15,36 @@
 </head>
 
 <body>
+    <?php if (has_nav_menu('primary')) : ?>
+        <div class="container">
+            <div id="SideNav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'  => 'primary',
+                        'menu_class'      => 'nav navbar-nav',
+                        'container_class' => 'primary-menu-container',
+                        'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+                        'fallback_cb'     => false,
+                    )
+                );
+                ?>
+            </div>
+        </div>
+    <?php endif; ?>
     <a class="announcement_link fixed-static" href="#">
         <div class="announcement">
             <p class="announcement_text">📣📣 ❗️ VILDE TILBUD PÅ X-GAMER ❗️ 📣📣</p>
         </div>
     </a>
-    <header role="banner" id="top" class="header sticky-top">
+    <header role="banner" id="top" class="header position-sticky">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div id="SideNav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    </div>
+                <div class="col-md-3">
                     <span class="align-bottom" onclick="openNav()"><i class="fas fa-thin fa-bars fa-2x"></i></span>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-5">
                     <div class="page-header d-flex justify-content-center">
                         <a href="<?php bloginfo('url') ?>">
                             <?php
@@ -45,7 +60,7 @@
 
                             endif ?>
                         </a>
-                        <a class="float-right text-dark" href="#"><i class="fas fa-search"></i></a>
+                        <!--<a class="float-right text-dark" href="#"><i class="fas fa-search"></i></a>-->
                     </div>
                 </div>
             </div>

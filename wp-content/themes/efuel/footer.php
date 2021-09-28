@@ -23,7 +23,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © <?php echo date('Y'); ?> Copyright
-        <a class="text-dark" href="<?php bloginfo('url')?>"><?php echo get_bloginfo('name'); ?></a>
+        <a class="text-dark" href="<?php bloginfo('url') ?>"><?php echo get_bloginfo('name'); ?></a>
     </div>
     <!-- Copyright -->
 </footer>
@@ -57,6 +57,15 @@
             }
         });
     });
+</script>
+<script>
+    function openNav() {
+        document.getElementById("SideNav").style.width = "350px";
+    }
+
+    function closeNav() {
+        document.getElementById("SideNav").style.width = "0";
+    }
 </script>
 
 </body>
