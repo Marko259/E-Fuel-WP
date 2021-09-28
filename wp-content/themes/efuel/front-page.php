@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+<div class="w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
-        <h1 class="text-white">Welcome to <em><?php echo get_bloginfo('name'); ?></em></h1>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
