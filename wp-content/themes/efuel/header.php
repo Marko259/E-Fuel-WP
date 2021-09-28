@@ -16,17 +16,21 @@
 
 <body>
     <?php if (has_nav_menu('primary')) : ?>
-        <div class="container">
+        <div class="container-fluid">
             <div id="SideNav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <?php
                 wp_nav_menu(
                     array(
-                        'theme_location'  => 'primary',
-                        'menu_class'      => 'nav navbar-nav',
-                        'container_class' => 'primary-menu-container',
-                        'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-                        'fallback_cb'     => false,
+                        'menu' => 'primary',
+                        'depth' => 2,
+                        'container' => 'div',
+                        'container_class' => 'nav navbar',
+                        'container_id' => 'navbarNavDropdown',
+                        'menu_class' => 'navbar-nav',
+                        'theme_location' => 'primary',
+                        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker' => new wp_bootstrap_navwalker()
                     )
                 );
                 ?>
