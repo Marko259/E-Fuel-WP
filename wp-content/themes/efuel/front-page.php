@@ -9,8 +9,8 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="C:\Users\Hp\Documents\GitHub\E-Fuel-WP\wp-content\themes\efuel\assets\images\Billede1.jpg" alt="First slide">
-              <div> style="height: 50px; width: 50px; background-color: #FFFF33" <h1>Køb dansk G-Fuel her!</h1> <p>Køb G-Fuel nu her i Danmark uden told og med kort fragtid</p> </div>
+              <img class="d-block w-100" src="<?php echo get_template_directory_uri() . '\assets\images\Billede1.jpg' ?>" alt="First slide">
+              <div style="height: 50px; width: 50px; background-color: #FFFF33"> <h1>KÃ¸b dansk G-Fuel her!</h1> <p>KÃ¸b G-Fuel nu her i Danmark uden told og med kort fragtid</p> </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="C:\Users\Hp\Documents\GitHub\E-Fuel-WP\wp-content\themes\efuel\assets\images\Billede2.jpg" alt="Second slide">
