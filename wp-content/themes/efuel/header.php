@@ -42,7 +42,7 @@
             <p class="announcement_text">📣📣 ❗️ VILDE TILBUD PÅ X-GAMER ❗️ 📣📣</p>
         </div>
     </a>
-    <header role="banner" id="top" class="header sticky-top">
+    <header role="banner" id="top" class="header position-sticky top-0">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
