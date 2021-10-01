@@ -59,6 +59,15 @@ html, body {
   transition: background-color .5s;
 }
 
+.openNav {
+  background-color: rgba(0,0,0,0.4) !important
+}
+
+.product-titles {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
 /* * {
   outline: 1px solid red;
 }*/
